@@ -1,12 +1,11 @@
 import { defineStore } from 'pinia';
+import { useUserStore } from './modules/user';
 export const useGlobalStore = defineStore('main', {
-  state: () => ({ count: 0 }),
-  getters: {
-    double: (state) => state.count * 2,
-  },
+  state: () => ({}),
+  getters: {},
   actions: {
-    increment() {
-      this.count++;
+    login(v: any) {
+      return useUserStore().login(1, v);
     },
   },
 });

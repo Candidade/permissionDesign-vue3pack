@@ -1,4 +1,8 @@
 <template>
   <router-view />
 </template>
-<style lang="scss"></style>
+<script lang="ts" setup>
+import { ref } from 'vue';
+const v = ref(2);
+</script>
+<style lang="less"></style>
